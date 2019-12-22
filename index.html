@@ -4,6 +4,32 @@
     <title>Web App</title>
   </head>
   <body>
-    Hello, World!
+    <div id="user_info">
+      <p>Hello, World!</p>
+    </div>
   </body>
+  
+  <script type="text/javascript">
+    /* global fetch */
+    
+    async function getUser() {
+      // get the user info from API
+      const api_url = 'https://oy9zrcbtt1.execute-api.us-east-1.amazonaws.com/prod/info?user_email=mr.coxall@mths.ca'
+      const api_response = await fetch(api_url);
+      const api_data = await(api_response).json();
+      
+      //document.getElementById('user_info').value = api_response;
+      console.log(api_response);
+    }
+    
+    console.log("Here");
+    getUser()
+    .then(success => {
+      console.log("Got the API correctly")
+    })
+    .catch(error => {
+      console.error(error);
+    });
+    
+  </script>
 </html>
