@@ -14,9 +14,12 @@
     
     async function getUser() {
       // get the user info from API
-      const api_url = 'https://oy9zrcbtt1.execute-api.us-east-1.amazonaws.com/prod/info?user_email=mr.coxall@mths.ca'
+      const api_url = 'https://rrj039lb5d.execute-api.us-east-1.amazonaws.com/prod/user-info?user_email=jane.smith@gmail.com'
+      
+      console.log("Going to call fetch")
       const api_response = await fetch(api_url);
-      const api_data = await(api_response).json();
+      console.log("Just called fetch")
+      //const api_data = await(api_response).json();
       
       //document.getElementById('user_info').value = api_response;
       console.log(api_response);
