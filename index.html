@@ -15,6 +15,7 @@
     async function getUser() {
       // get the user info from API
       const api_url = 'https://rrj039lb5d.execute-api.us-east-1.amazonaws.com/prod/user-info?user_email=jane.smith@gmail.com'
+      //const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
       
       console.log("Going to call fetch")
       const api_response = await fetch(api_url);
